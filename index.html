@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Wordpress: Disqus Popular Threads Pure Javascript Widget</title>
+  <script type="text/javascript" src="wp-disqus-pt.js"></script>
+<style type="text/css">
+  .wp-disqus-pt-popup {
+    position: absolute;
+    color: #fff;
+    background-color: #404040;
+    border: 1px solid rgba(0, 0, 0, .4);
+    border-radius: .5em;
+    box-shadow: 0px 1px rgba(255, 255, 255, .4) inset;
+    padding: 5px;
+    width: 250px;
+  }
+  .wp-disqus-pt-popup:after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    right: -8px;
+    border-width: 8px 0px 8px 8px;
+    border-style: solid;
+    border-color: transparent #404040;
+  }
+  .wp-disqus-pt-popularcomment-container {
+    padding: 10px 20px 10px 10px;
+  }
+  .wp-disqus-pt-popularcomment-count {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    padding: 1px 6px;
+    border-radius: 4px;
+    margin: 2px -5px;
+    color: white;
+    background-color: black;
+  }
+  .wp-disqus-pt-popularcomment-count:after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 7px;
+    border-width: 5px 5px 0 0;
+    border-style: solid;
+    border-color: black transparent;
+  }
+  .wp-disqus-pt-popularcomment-graph {
+    border-radius: 2px;
+    margin: -5px;
+  }
+</style>
+</head>
+<body>
+  <div style="float: right; width: 300px;">
+<script type="text/javascript">
+  var pt = new WpDisqusPt({
+    api_key: 'HFad0d91xZjjPQit44fTEbPk9gzn705oDeQQ5QAFWyzxiuBDYmS6xhZ9qeKcNQbh',
+    forum: 'dforge',
+    days_back: '90d',
+    colors: ['rgba(255, 0, 0, 0.5)', 'rgba(0, 255, 0, 0.5)', 'rgba(0, 0, 255, 0.5)', 'rgba(255, 0, 255, 0.5)', 'rgba(0, 255, 255, 0.5)']
+  });
+  pt.getData();
+</script>
+  </div>
+</body>
+</html>
